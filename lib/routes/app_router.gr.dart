@@ -8,75 +8,96 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i4;
-import 'package:auto_route_integration/screen/screen_a.dart' as _i1;
-import 'package:auto_route_integration/screen/screen_b.dart' as _i2;
-import 'package:auto_route_integration/screen/screen_c.dart' as _i3;
+import 'package:auto_route/auto_route.dart' as _i5;
+import 'package:auto_route_integration/screen/about_screen.dart' as _i4;
+import 'package:auto_route_integration/screen/home_screen.dart' as _i2;
+import 'package:auto_route_integration/screen/login_screen.dart' as _i1;
+import 'package:auto_route_integration/screen/profile_screen.dart' as _i3;
 
-abstract class $AppRouter extends _i4.RootStackRouter {
+abstract class $AppRouter extends _i5.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i4.PageFactory> pagesMap = {
-    RouteA.name: (routeData) {
-      return _i4.AutoRoutePage<dynamic>(
+  final Map<String, _i5.PageFactory> pagesMap = {
+    LoginRoute.name: (routeData) {
+      return _i5.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.ScreenA(),
+        child: const _i1.LoginScreen(),
       );
     },
-    RouteB.name: (routeData) {
-      return _i4.AutoRoutePage<dynamic>(
+    HomeRoute.name: (routeData) {
+      return _i5.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.ScreenB(),
+        child: const _i2.HomeScreen(),
       );
     },
-    RouteC.name: (routeData) {
-      return _i4.AutoRoutePage<dynamic>(
+    ProfileRoute.name: (routeData) {
+      return _i5.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.ScreenC(),
+        child: const _i3.ProfileScreen(),
+      );
+    },
+    AboutRoute.name: (routeData) {
+      return _i5.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i4.AboutScreen(),
       );
     },
   };
 }
 
 /// generated route for
-/// [_i1.ScreenA]
-class RouteA extends _i4.PageRouteInfo<void> {
-  const RouteA({List<_i4.PageRouteInfo>? children})
+/// [_i1.LoginScreen]
+class LoginRoute extends _i5.PageRouteInfo<void> {
+  const LoginRoute({List<_i5.PageRouteInfo>? children})
       : super(
-          RouteA.name,
+          LoginRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'RouteA';
+  static const String name = 'LoginRoute';
 
-  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
+  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i2.ScreenB]
-class RouteB extends _i4.PageRouteInfo<void> {
-  const RouteB({List<_i4.PageRouteInfo>? children})
+/// [_i2.HomeScreen]
+class HomeRoute extends _i5.PageRouteInfo<void> {
+  const HomeRoute({List<_i5.PageRouteInfo>? children})
       : super(
-          RouteB.name,
+          HomeRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'RouteB';
+  static const String name = 'HomeRoute';
 
-  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
+  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i3.ScreenC]
-class RouteC extends _i4.PageRouteInfo<void> {
-  const RouteC({List<_i4.PageRouteInfo>? children})
+/// [_i3.ProfileScreen]
+class ProfileRoute extends _i5.PageRouteInfo<void> {
+  const ProfileRoute({List<_i5.PageRouteInfo>? children})
       : super(
-          RouteC.name,
+          ProfileRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'RouteC';
+  static const String name = 'ProfileRoute';
 
-  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
+  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i4.AboutScreen]
+class AboutRoute extends _i5.PageRouteInfo<void> {
+  const AboutRoute({List<_i5.PageRouteInfo>? children})
+      : super(
+          AboutRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AboutRoute';
+
+  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
 }
