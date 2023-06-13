@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route_integration/routes/app_router.gr.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 @RoutePage()
 class HomeScreen extends StatelessWidget {
@@ -27,6 +28,14 @@ class HomeScreen extends StatelessWidget {
               child: const Text('Goto Normal Route'),
               onPressed: () {
                 AutoRouter.of(context).push(const AboutRoute());
+              },
+            ),
+            const SizedBox(height: 20.0),
+            ElevatedButton(
+              child: const Text('Logout'),
+              onPressed: () async {
+                SharedPreferences pref = await SharedPreferences.getInstance();
+                pref.clear();
               },
             ),
           ],

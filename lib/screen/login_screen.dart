@@ -1,9 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 @RoutePage()
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  final Function(bool?) onResult;
+  const LoginScreen({super.key, required this.onResult});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -20,12 +22,17 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  _login() {
+  _login() async {
     String username = _username.text.trim();
     String password = _password.text.trim();
 
     if (username == 'username' && password == 'password') {
-      // TODO: redirect to required page
+      // successful login
+      // save in shared preference
+      SharedPreferences pref = await SharedPreferences.getInstance();
+      pref.setBool('logged_in', true);
+      //
+      widget.onResult.call(true);
     } else {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
         content: Text('Wrong username or password'),

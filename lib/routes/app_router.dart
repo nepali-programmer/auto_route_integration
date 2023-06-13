@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_integration/routes/guard/auth_guard.dart';
 
 import 'app_router.gr.dart';
 
@@ -13,7 +14,7 @@ class AppRouter extends $AppRouter {
         AutoRoute(page: LoginRoute.page),
 
         /// Protected Route
-        AutoRoute(page: ProfileRoute.page),
+        AutoRoute(page: ProfileRoute.page, guards: [AuthGuard()]),
 
         /// Normal Route
         AutoRoute(page: AboutRoute.page),
