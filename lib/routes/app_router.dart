@@ -7,10 +7,10 @@ class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
         /// Initial Route
-        // AutoRoute(page: HomeRoute.page, initial: true),
+        AutoRoute(page: HomeRoute.page, initial: true),
 
         /// Login Route
-        AutoRoute(page: LoginRoute.page, initial: true),
+        AutoRoute(page: LoginRoute.page),
 
         /// Protected Route
         AutoRoute(page: ProfileRoute.page),
