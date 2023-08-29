@@ -12,9 +12,9 @@ class AppRouter extends $AppRouter {
           children: [
             AutoRoute(page: HomeRoute.page),
             AutoRoute(page: SongListRoute.page),
-            AutoRoute(page: SongDetailRoute.page),
             AutoRoute(page: SettingRoute.page),
           ],
         ),
+        AutoRoute(page: SongDetailRoute.page),
       ];
 }
