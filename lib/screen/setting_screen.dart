@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_integration/routes/app_router.gr.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -16,7 +17,9 @@ class SettingScreen extends StatelessWidget {
         children: [
           ListTile(
             title: const Text('Setting 1'),
-            onTap: () {},
+            onTap: () {
+              AutoRouter.of(context).push(const SettingDetailRoute());
+            },
           ),
           ListTile(
             title: const Text('Setting 2'),
