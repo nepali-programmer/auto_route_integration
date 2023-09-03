@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:auto_route_integration/screen/song_comment_list_screen.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -33,7 +32,7 @@ class SongDetailScreen extends StatelessWidget {
           const SizedBox(height: 20.0),
           const SizedBox(
             height: 400.0,
-            child: SongCommentListScreen(),
+            child: AutoRouter(),
           ),
         ],
       ),

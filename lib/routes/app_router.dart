@@ -15,18 +15,29 @@ class AppRouter extends $AppRouter {
               page: SongNavigationRoute.page,
               children: [
                 AutoRoute(page: SongListRoute.page),
-                AutoRoute(page: SongDetailRoute.page),
+                AutoRoute(
+                  page: SongDetailRoute.page,
+                  children: [
+                    AutoRoute(page: SongCommentListRoute.page, initial: true),
+                    AutoRoute(page: SongCommentDetailRoute.page),
+                  ],
+                ),
               ],
             ),
             AutoRoute(
               page: SettingNavigationRoute.page,
               children: [
                 AutoRoute(page: SettingRoute.page, initial: true),
-                AutoRoute(page: SettingDetailRoute.page),
+                AutoRoute(
+                  page: SettingDetailRoute.page,
+                  children: [
+                    AutoRoute(
+                        page: SettingInternalDetailRoute.page, initial: true),
+                  ],
+                ),
               ],
             ),
           ],
         ),
-        AutoRoute(page: SongCommentDetailRoute.page),
       ];
 }
