@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:auto_route_integration/screen/song_comment.dart';
+import 'package:auto_route_integration/screen/song_comment_list_screen.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -25,7 +25,7 @@ class SongDetailScreen extends StatelessWidget {
           const Text(
               'Amet laboris anim cupidatat in voluptate voluptate nisi magna laboris quis elit. Ea cupidatat anim cillum esse aliqua magna reprehenderit. Consectetur magna do voluptate dolor nisi Lorem. Veniam culpa ex duis proident laboris. Lorem magna laborum mollit eu consectetur amet magna esse elit qui enim. Ipsum ad tempor sit irure nostrud commodo.'),
           const SizedBox(height: 20.0),
-          const SongCommentHolder(),
+          const SongCommentListScreen(),
         ],
       ),
     );

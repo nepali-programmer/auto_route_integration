@@ -2,8 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_route_integration/routes/app_router.gr.dart';
 import 'package:flutter/material.dart';
 
-class SongCommentHolder extends StatelessWidget {
-  const SongCommentHolder({super.key});
+class SongCommentListScreen extends StatelessWidget {
+  const SongCommentListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
