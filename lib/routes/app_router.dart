@@ -27,5 +27,6 @@ class AppRouter extends $AppRouter {
             ),
           ],
         ),
+        AutoRoute(page: SongCommentDetailRoute.page),
       ];
 }
