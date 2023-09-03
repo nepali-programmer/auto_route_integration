@@ -13,6 +13,7 @@ class SongDetailScreen extends StatelessWidget {
         title: const Text('Song Detail'),
       ),
       body: ListView(
+        shrinkWrap: true,
         padding: const EdgeInsets.all(20.0),
         children: [
           Image.network('https://picsum.photos/200/300'),
@@ -25,7 +26,15 @@ class SongDetailScreen extends StatelessWidget {
           const Text(
               'Amet laboris anim cupidatat in voluptate voluptate nisi magna laboris quis elit. Ea cupidatat anim cillum esse aliqua magna reprehenderit. Consectetur magna do voluptate dolor nisi Lorem. Veniam culpa ex duis proident laboris. Lorem magna laborum mollit eu consectetur amet magna esse elit qui enim. Ipsum ad tempor sit irure nostrud commodo.'),
           const SizedBox(height: 20.0),
-          const SongCommentListScreen(),
+          Text(
+            'Comments',
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+          const SizedBox(height: 20.0),
+          const SizedBox(
+            height: 400.0,
+            child: SongCommentListScreen(),
+          ),
         ],
       ),
     );
